@@ -1,39 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Cormorant+Garamond:ital,wght@1,600&family=JetBrains+Mono:wght@500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Cormorant+Garamond:ital,wght@1,600&family=JetBrains+Mono:wght@500&display=swap');
+/* Custom Theme Variables */
+:root {
+  --color-surface: #faf8ff;
+  --color-on-surface: #131b2e;
+  --color-on-surface-variant: #464555;
+  --color-surface-container-low: #f2f3ff;
+  --color-surface-container: #eaedff;
+  --color-surface-container-high: #e2e7ff;
+  --color-surface-container-highest: #dae2fd;
+  --color-surface-container-lowest: #ffffff;
+
+  --color-primary: #3525cd;
+  --color-secondary: #831ada;
+  --color-error: #ba1a1a;
+}
 
 /* Base */
 body {
-  @apply bg-surface text-on-surface font-sans antialiased;
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
 }
 
-/* Glass Card */
-.glass {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-  border-radius: 16px;
+/* Utility Classes */
+.tech-header {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-on-surface-variant);
 }
 
-/* Gradient Accent */
-.gradient-primary {
-  background: linear-gradient(135deg, #4f46e5, #9333ea);
-  color: white;
-}
+.bg-surface { background-color: var(--color-surface); }
+.bg-surface-container-low { background-color: var(--color-surface-container-low); }
+.bg-surface-container-lowest { background-color: var(--color-surface-container-lowest); }
 
-/* Small UI Enhancements */
-.card {
-  @apply bg-surface-card shadow-soft rounded-2xl p-6 transition hover:shadow-lg;
-}
+.text-on-surface { color: var(--color-on-surface); }
+.text-on-surface-variant { color: var(--color-on-surface-variant); }
 
-.title {
-  @apply text-xl font-semibold text-on-surface;
-}
+.text-primary { color: var(--color-primary); }
+.bg-primary { background-color: var(--color-primary); }
 
-.subtitle {
-  @apply text-sm text-on-surface-variant;
-}
+.text-secondary { color: var(--color-secondary); }
+.bg-secondary { background-color: var(--color-secondary); }
+
+.text-error { color: var(--color-error); }
+.bg-error { background-color: var(--color-error); }
