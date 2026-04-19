@@ -19,6 +19,7 @@ export default {
 
   primary: "#3525cd",
   secondary: "#831ada",
+  tertiary: "#0ea5e9",
 
   success: "#16a34a",
   warning: "#f59e0b",
