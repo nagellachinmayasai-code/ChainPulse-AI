@@ -5,52 +5,35 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Cormorant+Garamond:ital,wght@1,600&family=JetBrains+Mono:wght@500&display=swap');
 
-/* Root variables (your theme preserved) */
-:root {
-  --color-surface: #faf8ff;
-  --color-on-surface: #131b2e;
-  --color-on-surface-variant: #464555;
-  --color-surface-container-low: #f2f3ff;
-  --color-surface-container: #eaedff;
-  --color-surface-container-high: #e2e7ff;
-  --color-surface-container-highest: #dae2fd;
-  --color-surface-container-lowest: #ffffff;
-
-  --color-primary: #3525cd;
-  --color-secondary: #831ada;
-  --color-tertiary: #00505f;
-
-  --color-outline: #777587;
-  --color-outline-variant: #c7c4d8;
-}
-
-/* Base styles */
+/* Base */
 body {
-  font-family: "Inter", sans-serif;
-  background-color: var(--color-surface);
-  color: var(--color-on-surface);
+  @apply bg-surface text-on-surface font-sans antialiased;
 }
 
-/* Custom utilities (converted from your @layer) */
-.glass-insight {
-  background: rgba(242, 243, 255, 0.7);
+/* Glass Card */
+.glass {
+  background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  border-radius: 16px;
 }
 
-.tech-header {
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 11px;
-  opacity: 0.6;
+/* Gradient Accent */
+.gradient-primary {
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: white;
 }
 
-.data-value {
-  font-family: "JetBrains Mono", monospace;
+/* Small UI Enhancements */
+.card {
+  @apply bg-surface-card shadow-soft rounded-2xl p-6 transition hover:shadow-lg;
 }
 
-.grid-visible {
-  border: 1px solid var(--color-outline-variant);
+.title {
+  @apply text-xl font-semibold text-on-surface;
+}
+
+.subtitle {
+  @apply text-sm text-on-surface-variant;
 }
