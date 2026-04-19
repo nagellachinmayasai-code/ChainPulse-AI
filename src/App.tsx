@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion';
 import { Screen, TransitionType, NavigationState } from './types';
 import Sidebar from './components/Sidebar';
 import TopBar from './components/TopBar';
